@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b1a">
+  <meta name="description" content="Explore planets, stars, galaxies, and space exploration with Cosmic Journey.">
+  <title>Explore the Universe | Cosmic Journey</title>
+  <link rel="stylesheet" href="css/explore.css">
+  <script src="js/topics-data.js" defer></script>
+<script src="js/explore.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Cosmic Journey home">
+      <span class="brand-icon">✦</span>
+      <span>COSMIC <span class="brand-accent">JOURNEY</span></span>
+    </a>
+
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="explore.html" class="active" aria-current="page">Explore</a>
+      <a href="quiz.html">Quiz</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR UNIVERSE AWAITS</p>
+      <h1>Find your next <span>discovery.</span></h1>
+      <p class="hero-description">
+        From mysterious black holes to distant galaxies, explore the wonders
+        of our universe one discovery at a time.
+      </p>
+    </section>
+
+    <section class="explore-section" aria-labelledby="explore-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE COSMOS, EXPLAINED</p>
+          <h2 id="explore-heading">Explore the universe</h2>
+        </div>
+        <span class="topic-count" id="topic-count">9 discoveries</span>
+      </div>
+
+      <div class="filters">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <span class="visually-hidden">Search discoveries</span>
+          <input
+            type="search"
+            id="topic-search"
+            placeholder="Search planets, stars, galaxies..."
+            autocomplete="off"
+          >
+          <button id="clear-search" class="clear-search" type="button"
+            aria-label="Clear search" hidden>×</button>
+        </label>
+
+        <label class="filter-label" for="category-filter">Category</label>
+        <select id="category-filter">
+          <option value="All topics">All topics</option>
+          <option value="Planets">Planets</option>
+          <option value="Stars">Stars</option>
+          <option value="Galaxies">Galaxies</option>
+          <option value="Space Exploration">Space Exploration</option>
+        </select>
+
+        <button id="reset-filters" class="reset-button" type="button">
+          Clear filters
+        </button>
+      </div>
+
+      <p class="results-message" id="results-message" aria-live="polite">
+        Loading your cosmic discoveries...
+      </p>
+
+      <div class="topic-grid" id="topic-grid"></div>
+
+      <div class="empty-state" id="empty-state" hidden>
+        <span class="empty-icon" aria-hidden="true">🔭</span>
+        <h3>No discoveries found</h3>
+        <p>Try another search or choose a different category.</p>
+        <button id="empty-reset" class="button button-primary" type="button">
+          Show all topics
+        </button>
+      </div>
+    </section>
+
+    <section class="quiz-banner">
+      <div>
+        <p class="eyebrow">READY FOR A CHALLENGE?</p>
+        <h2>Put your space knowledge to the test.</h2>
+        <p>Explore what you know with our cosmic quiz.</p>
+      </div>
+      <a href="quiz.html" class="button button-primary">Take the quiz <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-icon">✦</span>
+      <span>COSMIC <span class="brand-accent">JOURNEY</span></span>
+    </a>
+    <p>Made for curious minds and future explorers.</p>
+    <p>© <span id="current-year"></span> Cosmic Journey</p>
+  </footer>
+
+  <dialog class="topic-dialog" id="topic-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-header">
+      <p class="eyebrow">COSMIC DISCOVERY</p>
+      <button class="dialog-close" id="dialog-close" type="button"
+        aria-label="Close topic information">×</button>
+    </div>
+
+    <div class="dialog-topic-icon" id="dialog-icon" aria-hidden="true">🪐</div>
+    <p class="dialog-category" id="dialog-category">Planets</p>
+    <h2 id="dialog-title">Topic title</h2>
+    <p class="dialog-summary" id="dialog-summary"></p>
+
+    <div class="dialog-fact">
+      <h3><span aria-hidden="true">✦</span> Did you know?</h3>
+      <p id="dialog-fact"></p>
+    </div>
+
+    <button class="button button-primary dialog-done" id="dialog-done" type="button">
+      Back to exploring
+    </button>
+  </dialog>
+</body>
+</html>

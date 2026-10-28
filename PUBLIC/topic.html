@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b1a">
+  <meta name="description" content="Discover fascinating facts about the universe with Cosmic Journey.">
+  <title>Topic Details | Cosmic Journey</title>
+  <link rel="stylesheet" href="css/topic.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-icon">✦</span>
+      <span>COSMIC <span class="brand-accent">JOURNEY</span></span>
+    </a>
+
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="explore.html" class="active">Explore</a>
+      <a href="quiz.html">Quiz</a>
+    </nav>
+  </header>
+
+  <main class="page-container">
+    <a class="back-link" href="explore.html">← Back to all discoveries</a>
+
+    <section class="topic-hero" aria-labelledby="topic-title">
+      <div class="topic-visual" id="topic-visual" aria-hidden="true">🪐</div>
+
+      <div class="topic-heading">
+        <p class="eyebrow" id="topic-category">COSMIC DISCOVERY</p>
+        <h1 id="topic-title">Discover the universe</h1>
+        <p class="topic-intro" id="topic-summary">
+          Every discovery opens a new window into the cosmos.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-panel" aria-labelledby="about-heading">
+      <p class="eyebrow">GO BEYOND THE SURFACE</p>
+      <h2 id="about-heading">About this discovery</h2>
+      <div id="topic-content" class="topic-content">
+        <p>Loading topic information...</p>
+      </div>
+    </section>
+
+    <section class="fact-panel" aria-labelledby="fact-heading">
+      <div class="fact-symbol" aria-hidden="true">✦</div>
+      <div>
+        <p class="eyebrow">A LITTLE COSMIC WONDER</p>
+        <h2 id="fact-heading">Did you know?</h2>
+        <p id="topic-fact"></p>
+      </div>
+    </section>
+
+    <section class="page-actions">
+      <a href="explore.html" class="button button-secondary">← Explore more</a>
+      <a href="quiz.html" class="button button-primary">Test your knowledge →</a>
+    </section>
+
+    <p id="page-message" class="page-message" role="status" hidden></p>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-icon">✦</span>
+      <span>COSMIC <span class="brand-accent">JOURNEY</span></span>
+    </a>
+    <p>Made for curious minds and future explorers.</p>
+    <p>© <span id="current-year"></span> Cosmic Journey</p>
+  </footer>
+<script src="js/topics-data.js"></script>
+<script src="js/topic.js"></script>
+</body>
+</html>
